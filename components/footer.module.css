@@ -1,0 +1,26 @@
+/* footer */
+
+ul.footer {
+    padding: 0px;
+    list-style-type: none;
+    text-align: center;
+    font-size: 35px;
+}
+
+li.blog {
+    font-size: 16px;
+    display: inline;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.footer {
+    font-size: 35px;
+}
+
+@media (min-width: 768px) {
+    li.blog {
+        font-size: 26px;
+    }
+}

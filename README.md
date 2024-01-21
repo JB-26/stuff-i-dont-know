@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Super Podcast Starter
+_Like any other starter, only super!_
 
-## Getting Started
+Super Podcast Starter is a template designed for you to get up and running with a website that has plenty of features out of the box to help you promote your podcast!
 
-First, run the development server:
+The current version is __v0.0.1__
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+This blog is built using [NextJS](https://nextjs.org/).
+
+And also with the following dependencies:
+- @vercel/analytics
+- date-fns
+- gray-matter
+- next
+- react
+- react-dom
+- remark
+- remark-html
+- rss
+- playwright (for automated tests)
+
+Click [here](https://super-podcast-starter.vercel.app/) to see a demo of this template.
+
+# Getting started...
+
+To get started with this (after cloning the repo), run the following to install all the packages and dependencies:
+`npm install`
+
+To run this application locally:
+`npm run dev`
+
+# What's included in Super Podcast Starter?
+
+This repo will allow you to build your own website/blog with the following pages/features:
+- Homepage
+    - Pagination included (and customisable)
+    - Links to episodes
+    - Ordered by newest episode first
+- Responsive design
+- Customisable 404 page
+- ESLint
+
+## If deploying to Vercel...
+- Analytics included (this will only work on if deploying to Vercel)
+
+If you don't want to use Analytics, remove the `Analytics` tag located in `pages/_app.js`
+
+# Configuration
+## Index
+You'll need to open the `index.js` file to begin making changes, including:
+- Adding your show name
+- Changing the logo
+- Subtitle
+- Introduction text
+
+The photo to be changed is located at `../public/images/podcastLogo.png`
+
+## Episodes
+All episodes are stored in the `posts` directory, which contains __markdown__ files.
+
+Simply add a new markdown file to the `posts` directory and the new episode will appear on the homepage! Make sure that your file ends with the `.md` file extension (posts that end with the `.markdown` file extension won't work)
+
+Each blog post must have the following configuration:
+
+```
+---
+title: "A post"
+date: "2023-08-04" #YYYY-MM-DD
+tags: ["Test"]
+episode: '<iframe></iframe>'
+---
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If your chosen podcast host offers an iframe that you can embed on webpages, paste the iframe into the episode metadata. Make sure the iframe is in single quotation marks.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+# Footer
+You'll need to open the `components/footer.js` to begin making changes, including:
+- Adding new links
+- Updating existing links
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+# Favicon
+You'll notice that the favicon is a blue square (also used in the header). Feel free to change this.
+You can use something like [Favicon Generator](https://favicon.io/favicon-generator/) to create your own.
 
-## Learn More
+You'll need to update the following files under the `public` directory:
+- public/android-chrome-192x192.png
+- public/android-chrome-512x512.png
+- public/apple-touch-icon.png
+- public/favicon-16x16.png
+- public/favicon-32x32.png
+- public/favicon.ico
 
-To learn more about Next.js, take a look at the following resources:
+# Site title
+To update the site title, you'll need to open the `components/layout.js` file to begin making changes.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To update the title, update the constant called `siteTitle`.
