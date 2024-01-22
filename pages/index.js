@@ -12,7 +12,6 @@ import {getSortedPostsData} from "../lib/posts";
 import Link from "next/link";
 
 const postsPerPage = 3;
-import { useRouter } from "next/router";
 
 export async function getStaticProps() {
   const allPostsData = getSortedPostsData();
@@ -54,9 +53,9 @@ export default function Home({
               </span>
             </h1>
             <p data-testid="subtitle" className={styles.known}>
-              Your subtitle here. Open the Index.js page to edit this!
+              Your subtitle here. Open the Index.js page to edit this! Make sure you view the README to know how to customise this starter.
             </p>
-            <p data-testid="paragraph">Your introduction</p>
+            <p data-testid="paragraph">Your introduction to your amazing podcast!</p>
           </div>
           <div data-testid="image" className={styles.right}>
             <Image

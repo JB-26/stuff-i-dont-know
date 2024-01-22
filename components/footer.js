@@ -3,31 +3,26 @@ import styles from "./footer.module.css";
 export default function Footer() {
   return (
     <footer>
+      <div className={styles.followContainer}>
+        <h1 data-testid="main-heading" className={styles.follow}>
+          Follow the show!
+        </h1>
+      </div>
       <ul className={styles.footer}>
         <li className={styles.blog}>
           <a
-            href="https://github.com/"
+            href="https://www.threads.net/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            GitHub
-          </a>
-        </li>
-        <li className={styles.blog}>
-          <a
-            className={styles.blog}
-            href="https://www.linkedin.com/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            LinkedIn
+            Threads
           </a>
         </li>
         <li className={styles.blog}>
           <a
             className={styles.blog}
             href="https://joinmastodon.org/"
-            rel="noopener noreferrer me"
+            rel="noopener noreferrer"
             target="_blank"
           >
             Mastodon
@@ -36,11 +31,21 @@ export default function Footer() {
         <li className={styles.blog}>
           <a
             className={styles.blog}
-            href="/rss.xml"
+            href="https://www.instagram.com/"
             rel="noopener noreferrer"
             target="_blank"
           >
-            RSS
+            Instagram
+          </a>
+        </li>
+        <li className={styles.blog}>
+          <a
+            className={styles.blog}
+            href="https://twitter.com/home"
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            X
           </a>
         </li>
       </ul>

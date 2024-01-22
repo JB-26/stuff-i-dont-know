@@ -19,8 +19,29 @@ li.blog {
     font-size: 35px;
 }
 
+.follow {
+    font-size: 2rem;
+    line-height: 1.2;
+    font-weight: 800;
+    letter-spacing: -0.05rem;
+    margin: 0.5rem 0;
+    text-align: center;
+}
+
+.followContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    width: auto;
+    margin-top: 15px;
+}
+
 @media (min-width: 768px) {
     li.blog {
         font-size: 26px;
+    }
+
+    .follow {
+        font-size: 2.5rem;
     }
 }

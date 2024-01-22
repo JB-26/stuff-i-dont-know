@@ -1,0 +1,48 @@
+name: Run Playwright Tests
+
+on:
+  push:
+    branches:
+      - '*'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repository
+      uses: actions/checkout@v2
+
+    - name: Set Up Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: 18.17.0
+
+    - name: Install Dependencies
+      run: npm install
+
+    - name: Build Next.js App
+      run: npm run build
+
+    - name: Install Playwright Dependencies
+      run: npx playwright install-deps
+
+    - name: Install Playwright browsers
+      run: npx playwright install
+
+    - name: Run NextJS application
+      run: npm run start &
+
+    - name: Wait for NextJS app to start
+      run: |
+        timeout=0
+        until [[ $timeout -eq 30 ]]; do
+          if nc -z localhost 3000; then
+            break
+          fi
+          timeout=$((timeout + 1))
+          sleep 1
+        done
+
+    - name: Run Playwright Tests
+      run: npx playwright test

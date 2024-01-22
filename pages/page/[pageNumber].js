@@ -48,13 +48,15 @@ export default function BlogPage({ currentPosts, numPages, pageNumber }) {
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h1 className={utilStyles.headingXl}>Episodes - Page {pageNumber}</h1>
         <ul className={utilStyles.list}>
-          {currentPosts.map(({ id, date, title }) => (
+          {currentPosts.map(({ id, date, title, episode }) => (
             <li className={utilStyles.listItem} key={id}>
               <Link href={`/posts/${id}`}>{title}</Link>
               <br />
               <small className={utilStyles.lightText}>
                 <Date dateString={date} />
               </small>
+              {/* Render the episode iframe using dangerouslySetInnerHTML */}
+              <div dangerouslySetInnerHTML={{ __html: episode }} />
             </li>
           ))}
         </ul>
