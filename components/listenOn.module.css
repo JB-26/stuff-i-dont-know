@@ -19,7 +19,6 @@ a:hover.blog {
 .icon {
     padding-left: 9px;
     padding-right: 9px;
-    padding-top: 3px;
     margin-top: 3.5px;
 }
 
@@ -31,14 +30,13 @@ a:hover.blog {
 .listen {
     display: flex;
     justify-content: center;
-    flex-direction: row;
-    height: 45px;
+    flex-direction: column;
+    align-items: center;
     font-size: 30px;
     padding: 15px 0px 0px 0px;
     z-index: 1;
     width: auto;
     top: 0px;
-    margin: 0px 0px 50px 0px;
 }
 
 .listenItem {
@@ -48,7 +46,10 @@ a:hover.blog {
 
 @media (min-width: 768px) {
     .listen {
+        flex-direction: row;
         padding: 75px 0px 0px 0px;
+        height: 45px;
+        margin: 0px 0px 50px 0px;
     }
 
     .badge {

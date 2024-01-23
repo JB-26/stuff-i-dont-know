@@ -16,11 +16,11 @@ test('Check for important content', async ({ page }) => {
     
     // Check if subtitle is present
     const subtitle = await page.textContent('[data-testid="subtitle"]');
-    expect(subtitle).toBe('Your subtitle here. Open the Index.js page to edit this!');
+    expect(subtitle).toBe('Your subtitle here. Open the Index.js page to edit this! Make sure you view the README to know how to customise this starter.');
 
     // Check if paragraph is present
     const paragraph = await page.textContent('[data-testid="paragraph"]');
-    expect(paragraph).toBe("Your introduction");
+    expect(paragraph).toBe("Your introduction to your amazing podcast!");
 });
 
 test('Image is displayed', async ({ page }) => {

@@ -1,7 +1,7 @@
 import styles from "./listenOn.module.css";
 import Link from "next/link";
 import ApplePodcasts from "../public/podcast-logos/Apple_Podcasts_Listen_Badge.svg";
-import SpotifyBadge from "../public/podcast-logos/spotify-podcast-badge.svg";
+import SpotifyBadge from "../public/podcast-logos/spotify-podcast-badge-new.svg";
 import YoutubeBadge from "../public/podcast-logos/Available on YouTube Podcast Badges/Black/SVG/AvailableonYouTube-black-SVG.svg";
 import Image from "next/image";
 
