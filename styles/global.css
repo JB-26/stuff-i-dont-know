@@ -13,7 +13,7 @@ body {
     min-width: 300px;
     /*prevents the page from scrolling horizontally while preserving the usual vertical scroll */
     overflow-x: hidden;
-    background-color: white;
+    background-color: #2b3467;
 }
 
 * {
@@ -21,24 +21,29 @@ body {
 }
 
 a {
-    color: #0070f3;
-    text-decoration: none;
+    color: #fcffe7;
+    text-decoration: underline;
 }
 
 h1 {
     position: relative;
     overflow: hidden;
     padding-bottom: 5px;
+    color: #fcffe7;
 }
 
 h1::after {
     content: "";
     height: .1em;
-    background: #0070f3;
+    background: #fcffe7;
     width: 100%;
     margin-left: -100%;
     position: absolute;
     bottom: 0;
+}
+
+p {
+    color: #fcffe7;
 }
 
 a:hover {
@@ -51,12 +56,16 @@ img {
 }
 
 i {
-    color: black;
+    color: #fcffe7;
+}
+
+time {
+    color: #fcffe7;
 }
 
 
 i:hover {
-    color: #0070f3;
+    color: #fcffe7;
 }
 /* displaying code */
 pre {

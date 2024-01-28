@@ -5,7 +5,7 @@ export default function Footer() {
     <footer>
       <div className={styles.followContainer}>
         <h1 data-testid="main-heading" className={styles.follow}>
-          Follow the show!
+          Follow the show! <i className="fa-solid fa-hashtag"></i>
         </h1>
       </div>
       <ul className={styles.footer}>
@@ -15,7 +15,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             target="_blank"
           >
-            Threads
+            <i className="fa-brands fa-threads"></i>
           </a>
         </li>
         <li className={styles.blog}>
@@ -25,7 +25,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             target="_blank"
           >
-            Mastodon
+            <i className="fa-brands fa-mastodon"></i>
           </a>
         </li>
         <li className={styles.blog}>
@@ -35,17 +35,7 @@ export default function Footer() {
             rel="noopener noreferrer"
             target="_blank"
           >
-            Instagram
-          </a>
-        </li>
-        <li className={styles.blog}>
-          <a
-            className={styles.blog}
-            href="https://twitter.com/home"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            X
+            <i className="fa-brands fa-instagram"></i>
           </a>
         </li>
       </ul>

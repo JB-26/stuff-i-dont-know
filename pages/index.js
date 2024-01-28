@@ -4,11 +4,12 @@ import Footer from "../components/footer";
 import utilStyles from "../styles/utils.module.css";
 import styles from "../styles/index.module.css";
 import Head from "next/head";
+import Script from "next/script";
 import Image from "next/image";
 import logoImage from "../public/images/podcastLogo.png";
 import Date from "../components/date";
 import paginationStyle from "../styles/blog.module.css";
-import {getSortedPostsData} from "../lib/posts";
+import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 
 const postsPerPage = 3;
@@ -36,34 +37,58 @@ export default function Home({
 }) {
   return (
     <Layout home>
+      <Script
+        src="https://kit.fontawesome.com/af67ca5a39.js"
+        crossOrigin="anonymous"
+        async
+      ></Script>
       <Head>
         <title>{siteTitle}</title>
         <meta
           charSet="utf-8"
-          name="The personal website of IT Professional, Joshua Blewitt"
+          name="The official website for the 'Stuff I don't know!' podcast"
         />
       </Head>
       <section className={utilStyles.headingMd}>
         <div className={styles.content}>
           <div className={styles.left}>
             <h1 data-testid="main-heading" className={utilStyles.heading2Xl}>
-              YOUR SHOW NAME {"  "}
+              Stuff I don&apos;t know! {"  "}
               <span role="img" aria-label="string">
                 🎙️
               </span>
             </h1>
-            <p data-testid="subtitle" className={styles.known}>
-              Your subtitle here. Open the Index.js page to edit this! Make sure you view the README to know how to customise this starter.
-            </p>
-            <p data-testid="paragraph">Your introduction to your amazing podcast!</p>
-          </div>
-          <div data-testid="image" className={styles.right}>
             <Image
               priority
               className={styles.image}
               src={logoImage}
+              data-testid="image"
               alt="Your podcast logo!"
             />
+            <p data-testid="subtitle" className={styles.known}>
+              Ever wonder about the mysteries that surround us every day? Join
+              me, <Link href="https://joshblewitt.dev/">Joshua Blewitt</Link>, on a bi-weekly journey into the unknown with
+              my podcast, &ldquo;Stuff I Don&apos;t Know!&ldquo;
+            </p>
+            <p data-testid="paragraph">
+              In this show, we dive headfirst into the vast sea of knowledge,
+              exploring everything from the commonplace, like the inner workings
+              of TVs and fridges, to the complexities of cutting-edge subjects
+              like quantum computing and astrophysics. <br /> <br />
+              But here&apos;s the twist – I&apos;m not an expert. I&apos;m just
+              a curious mind trying to make sense of the world. Every episode, I
+              take on a new challenge, unraveling the intricacies of a topic I
+              know nothing about. It&apos;s like learning on the go, and I want
+              you to be part of the adventure. <br /> <br />
+              So, why embark on this quest for the unknown? Because
+              understanding the unfamiliar is a thrilling journey, and the best
+              part is, you get to be my co-pilot. Together, we&apos;ll laugh,
+              question, and explore the depths of knowledge, making the complex
+              seem a little less daunting. <br /> <br />
+              Tune in every fortnight as I stumble through uncharted
+              territories, armed with curiosity and a microphone. The more we
+              learn, the more we realise how much stuff we don&apos;t know.
+            </p>
           </div>
         </div>
       </section>

@@ -8,7 +8,7 @@ ul.footer {
 }
 
 li.blog {
-    font-size: 16px;
+    font-size: 35px;
     display: inline;
     text-align: center;
     padding-left: 15px;
@@ -26,6 +26,7 @@ li.blog {
     letter-spacing: -0.05rem;
     margin: 0.5rem 0;
     text-align: center;
+    text-shadow: 1px 1px #eb455f;
 }
 
 .followContainer {
@@ -36,6 +37,11 @@ li.blog {
     margin-top: 15px;
 }
 
+.fa-hashtag {
+    color: #FFC93C;
+    text-shadow: 4px 1px #eb455f;
+}
+
 @media (min-width: 768px) {
     li.blog {
         font-size: 26px;
@@ -43,5 +49,9 @@ li.blog {
 
     .follow {
         font-size: 2.5rem;
+    }
+
+    li.blog {
+        font-size: 45px;
     }
 }

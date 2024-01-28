@@ -3,7 +3,7 @@ import styles from "./layout.module.css";
 import Link from "next/link";
 import Footer from "./footer";
 
-export const siteTitle = "Your title!";
+export const siteTitle = "Stuff I don't know!";
 
 export default function Layout({ children, home }) {
   return (
