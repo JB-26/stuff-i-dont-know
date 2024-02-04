@@ -10,7 +10,7 @@ export default function Header() {
     <section className={styles.listen}>
       <div className={styles.listenItem}>
         <Link
-          href={"https://www.apple.com/uk/apple-podcasts/"}
+          href={"https://podcasts.apple.com/us/podcast/stuff-i-dont-know/id1729084648"}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -24,7 +24,7 @@ export default function Header() {
       </div>
       <div className={styles.listenItem}>
         <Link
-          href={"https://support.spotify.com/uk/"}
+          href={"https://open.spotify.com/show/3AcYKCypAQVsc71QMaSq5Y"}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -32,20 +32,6 @@ export default function Header() {
             priority
             src={SpotifyBadge}
             alt={"Listen on Spotify"}
-            className={styles.badge}
-          />
-        </Link>
-      </div>
-      <div className={styles.listenItem}>
-        <Link
-          href={"https://www.youtube.com/podcasts"}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            priority
-            src={YoutubeBadge}
-            alt={"Listen on YouTube"}
             className={styles.badge}
           />
         </Link>

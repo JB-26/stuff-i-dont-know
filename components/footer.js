@@ -11,7 +11,7 @@ export default function Footer() {
       <ul className={styles.footer}>
         <li className={styles.blog}>
           <a
-            href="https://www.threads.net/"
+            href="https://www.threads.net/@stuffidontknowpodcast"
             rel="noopener noreferrer"
             target="_blank"
           >
@@ -21,17 +21,7 @@ export default function Footer() {
         <li className={styles.blog}>
           <a
             className={styles.blog}
-            href="https://joinmastodon.org/"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            <i className="fa-brands fa-mastodon"></i>
-          </a>
-        </li>
-        <li className={styles.blog}>
-          <a
-            className={styles.blog}
-            href="https://www.instagram.com/"
+            href="https://www.instagram.com/stuffidontknowpodcast?igsh=MXhueG5hNTA3c3QwaQ%3D%3D&utm_source=qr"
             rel="noopener noreferrer"
             target="_blank"
           >
