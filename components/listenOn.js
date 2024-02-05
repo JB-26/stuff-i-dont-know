@@ -36,6 +36,20 @@ export default function Header() {
           />
         </Link>
       </div>
+      <div className={styles.listenItem}>
+        <Link
+          href={"https://www.youtube.com/@StuffIdontknow-sr1lk"}
+          target="_blank"
+          rel="noopener noreferrer"
+          >
+          <Image
+            priority
+            src={YoutubeBadge}
+            alt={"Listen on YouTube"}
+            className={styles.badge}
+          />
+        </Link>
+      </div>
     </section>
   );
 }
